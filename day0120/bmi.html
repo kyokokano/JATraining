@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>bmi</title>
+	</head>
+	<body>
+		身長(cm):<input type="number" id="height"><br>
+		体重(kg):<input type="number" id="weight"><br>
+		<button id="bt" onclick="bmiCheck()">Check!</button>
+		<div id = "result"></div>
+		<script>
+			let height=document.getElementById("height");
+			let weight=document.getElementById("weight");
+			const bmiCheck=()=>{
+				height=parseFloat(height.value);
+				weight=parseFloat(weight.value);
+				let bmi=(weight/(height/100 * height/100));
+				document.getElementById("result").textContent=`あなたのbmiは${bmi.toFixed(1)}です`;
+			}
+		</script>
+	</body>
+</html>
